@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity"
+    android:background="@color/bgColor">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintBottom_toTopOf="@id/welcome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="@string/app_name"
+        app:titleTextAppearance="@style/TitleBarTextAppearance" />
+
+    <TextView
+        android:id="@+id/welcome"
+        style="@style/TextLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="32dp"
+        android:padding="5dp"
+        android:text="@string/welcome_to_alc_4_0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/aboutAndela"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <Button
+        android:id="@+id/aboutAndela"
+        style="@style/TextMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@color/buttonColor"
+        android:text="@string/about_alc"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:typeface="serif"
+        android:fontFamily="@font/aldrich"
+        app:layout_constraintBottom_toTopOf="@+id/myProfile"
+        app:layout_constraintEnd_toEndOf="@+id/welcome"
+        app:layout_constraintStart_toStartOf="@+id/welcome"
+        app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+    <Button
+        android:id="@+id/myProfile"
+        style="@style/TextMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/aldrich"
+        android:background="@color/buttonColor"
+        android:text="@string/my_profile"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="@+id/aboutAndela"
+        app:layout_constraintStart_toStartOf="@+id/aboutAndela"
+        app:layout_constraintTop_toBottomOf="@+id/aboutAndela" />
+</android.support.constraint.ConstraintLayout>
